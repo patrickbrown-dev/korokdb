@@ -1,0 +1,47 @@
+<%= form_with(model: cartridge) do |form| %>
+  <% if cartridge.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cartridge.errors.count, "error") %> prohibited this cartridge from being saved:</h2>
+
+      <ul>
+        <% cartridge.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :game_id, style: "display: block" %>
+    <%= form.select :game_id, options_from_collection_for_select(Game.all, :id, :title) %>
+  </div>
+
+  <div>
+    <%= form.label :code, style: "display: block" %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div>
+    <%= form.label :build, style: "display: block" %>
+    <%= form.text_field :build %>
+  </div>
+
+  <div>
+    <%= form.label :revision, style: "display: block" %>
+    <%= form.text_field :revision %>
+  </div>
+  
+  <div>
+    <%= form.label :region, style: "display: block" %>
+    <%= form.select :region, options_for_select([['USA', 'USA'], ['JPN', 'JPN'], ['EUR', 'EUR'], ['AUS', 'AUS']]) %>
+  </div>
+
+  <div>
+    <%= form.label :game_version, style: "display: block" %>
+    <%= form.text_field :game_version %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cartridges</h1>
+
+<div id="cartridges">
+  <% @cartridges.each do |cartridge| %>
+    <%= render cartridge %>
+    <p>
+      <%= link_to "Show this cartridge", cartridge %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New cartridge", new_cartridge_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game: one
+  code: A334
+  build: A
+  revision: "000"
+  region: USA
+  game_version: 1.0.0
+
+two:
+  game: two
+  code: AACC
+  build: B
+  revision: "001"
+  region: JPN
+  game_version: 1.1.0
