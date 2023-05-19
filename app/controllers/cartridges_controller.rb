@@ -65,6 +65,6 @@ class CartridgesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cartridge_params
-      params.require(:cartridge).permit(:game_id, :code, :build, :revision, :game_version)
+      params.require(:cartridge).permit(:game_id, :code, :build, :revision, :region, :game_version)
     end
 end

@@ -1,32 +1,25 @@
-<div id="<%= dom_id cartridge %>">
-  <p>
-    <strong>Game:</strong>
-    <%= cartridge.game_id %>
-  </p>
+<tr id="<%= dom_id cartridge %>">
+  <td>
+    <%= cartridge.game.title %>
+  </td>
 
-  <p>
-    <strong>Code:</strong>
+  <td>
     <%= cartridge.code %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Build:</strong>
+  <td>
     <%= cartridge.build %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Revision:</strong>
+  <td>
     <%= cartridge.revision %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Region:</strong>
-    <%= cartridge.region %>
-  </p>
+  <td>
+    <%= Cartridge.regions[cartridge.region] %>
+  </td>
 
-  <p>
-    <strong>Game version:</strong>
+  <td>
     <%= cartridge.game_version %>
-  </p>
-
-</div>
+  </td>
+</tr>

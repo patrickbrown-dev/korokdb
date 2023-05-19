@@ -2,13 +2,24 @@
 
 <h1>Cartridges</h1>
 
-<div id="cartridges">
+<table id="cartridges">
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Code</th>
+      <th>Build</th>
+      <th>Revision</th>
+      <th>Region</th>
+      <th>Game version</th>
+    </tr>
+  </thead>
+
   <% @cartridges.each do |cartridge| %>
     <%= render cartridge %>
-    <p>
+    <!--p>
       <%= link_to "Show this cartridge", cartridge %>
-    </p>
+    </p-->
   <% end %>
-</div>
+</table>
 
 <%= link_to "New cartridge", new_cartridge_path %>
