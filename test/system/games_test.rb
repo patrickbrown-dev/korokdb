@@ -32,10 +32,10 @@ class GamesTest < ApplicationSystemTestCase
     click_on "Back"
   end
 
-   test "should destroy Game" do
-     visit game_url(@game)
-     click_on "Destroy this game", match: :first
-  
+  test "should destroy Game" do
+    visit game_url(@game)
+    click_on "Destroy this game", match: :first
+
     assert_text "Game was successfully destroyed"
-   end
+  end
 end
