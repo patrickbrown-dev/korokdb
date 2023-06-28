@@ -17,7 +17,7 @@ class CartridgesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cartridge" do
     assert_difference("Cartridge.count") do
-      post cartridges_url, params: { cartridge: { build: @cartridge.build, code: @cartridge.code, game_id: @cartridge.game_id, game_version: @cartridge.game_version, revision: @cartridge.revision, region: @cartridge.region } }
+      post cartridges_url, params: {cartridge: {build: @cartridge.build, code: @cartridge.code, game_id: @cartridge.game_id, game_version: @cartridge.game_version, revision: @cartridge.revision, region: @cartridge.region}}
     end
 
     assert_redirected_to cartridge_url(Cartridge.last)
@@ -34,7 +34,7 @@ class CartridgesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cartridge" do
-    patch cartridge_url(@cartridge), params: { cartridge: { build: @cartridge.build, code: @cartridge.code, game_id: @cartridge.game_id, game_version: @cartridge.game_version, revision: @cartridge.revision, region: @cartridge.region } }
+    patch cartridge_url(@cartridge), params: {cartridge: {build: @cartridge.build, code: @cartridge.code, game_id: @cartridge.game_id, game_version: @cartridge.game_version, revision: @cartridge.revision, region: @cartridge.region}}
     assert_redirected_to cartridge_url(@cartridge)
   end
 

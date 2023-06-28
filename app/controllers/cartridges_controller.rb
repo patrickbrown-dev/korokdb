@@ -1,5 +1,5 @@
 class CartridgesController < ApplicationController
-  before_action :set_cartridge, only: %i[ show edit update destroy ]
+  before_action :set_cartridge, only: %i[show edit update destroy]
 
   # GET /cartridges or /cartridges.json
   def index
@@ -58,13 +58,14 @@ class CartridgesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cartridge
-      @cartridge = Cartridge.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def cartridge_params
-      params.require(:cartridge).permit(:game_id, :code, :build, :revision, :game_version)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cartridge
+    @cartridge = Cartridge.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def cartridge_params
+    params.require(:cartridge).permit(:game_id, :code, :build, :region, :revision, :game_version)
+  end
 end
