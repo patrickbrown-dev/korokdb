@@ -22,6 +22,7 @@ group :development, :test do
   gem "standard"
   gem "standard-rails"
   gem "bundler-audit"
+  gem "brakeman"
 end
 
 group :development do

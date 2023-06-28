@@ -78,6 +78,7 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.7, < 3)
       sassc-rails (>= 2.0.0)
+    brakeman (6.0.0)
     builder (3.2.4)
     bundler-audit (0.9.1)
       bundler (>= 1.2.0, < 3)
@@ -281,6 +282,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 5.3.0.alpha1)
+  brakeman
   bundler-audit
   capybara
   debug
