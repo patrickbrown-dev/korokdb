@@ -6,9 +6,9 @@
   <% @cartridges.each do |cartridge| %>
     <%= render cartridge %>
     <p>
-      <%= link_to "Show this cartridge", cartridge %>
+      <%= link_to "Show this cartridge", admin_cartridge_path(cartridge) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New cartridge", new_cartridge_path %>
+<%= link_to "New cartridge", new_admin_cartridge_path %>

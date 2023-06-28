@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cartridge %>
+
+<div>
+  <%= link_to "Edit this cartridge", edit_admin_cartridge_path(@cartridge) %> |
+  <%= link_to "Back to cartridges", admin_cartridges_path %>
+
+  <%= button_to "Destroy this cartridge", admin_cartridge_path(@cartridge), method: :delete %>
+</div>
