@@ -21,6 +21,8 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "standard"
   gem "standard-rails"
+  gem "bundler-audit"
+  gem "brakeman"
 end
 
 group :development do
