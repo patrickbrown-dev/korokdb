@@ -6,9 +6,9 @@
   <% @games.each do |game| %>
     <%= render game %>
     <p>
-      <%= link_to "Show this game", game %>
+      <%= link_to "Show this game", admin_game_path(game) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New game", new_game_path %>
+<%= link_to "New game", new_admin_game_path %>

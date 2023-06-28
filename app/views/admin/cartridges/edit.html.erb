@@ -1,0 +1,10 @@
+<h1>Editing cartridge</h1>
+
+<%= render "form", cartridge: @cartridge %>
+
+<br>
+
+<div>
+  <%= link_to "Show this cartridge", admin_cartridge_path(@cartridge) %> |
+  <%= link_to "Back to cartridges", admin_cartridges_path %>
+</div>

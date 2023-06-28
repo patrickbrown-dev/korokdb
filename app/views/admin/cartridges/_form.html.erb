@@ -1,4 +1,4 @@
-<%= form_with(model: cartridge) do |form| %>
+<%= form_with(model: [:admin, cartridge]) do |form| %>
   <% if cartridge.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(cartridge.errors.count, "error") %> prohibited this cartridge from being saved:</h2>
@@ -30,7 +30,7 @@
     <%= form.label :revision, style: "display: block" %>
     <%= form.text_field :revision %>
   </div>
-  
+
   <div>
     <%= form.label :region, style: "display: block" %>
     <%= form.select :region, options_for_select([['USA', 'usa'], ['JPN', 'jpn'], ['EUR', 'eur'], ['AUS', 'aus']]) %>
