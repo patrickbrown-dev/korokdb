@@ -2,13 +2,19 @@
 
 <h1>Games</h1>
 
-<div id="games">
-  <% @games.each do |game| %>
-    <%= render game %>
-    <p>
-      <%= link_to "Show this game", admin_game_path(game) %>
-    </p>
-  <% end %>
-</div>
+<table class="table" id="games">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @games.each do |game| %>
+      <%= render game %>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to "New game", new_admin_game_path %>
