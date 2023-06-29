@@ -1,32 +1,33 @@
-<div id="<%= dom_id cartridge %>">
-  <p>
-    <strong>Game:</strong>
-    <%= cartridge.game_id %>
-  </p>
+<tr id="<%= dom_id cartridge %>">
+  <td>
+    <%= cartridge.id %>
+  </td>
 
-  <p>
-    <strong>Code:</strong>
+  <td>
+    <%= link_to cartridge.game.title, admin_game_path(cartridge.game) %>
+  </td>
+
+  <td>
     <%= cartridge.code %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Build:</strong>
+  <td>
     <%= cartridge.build %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Revision:</strong>
+  <td>
     <%= cartridge.revision %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Region:</strong>
-    <%= cartridge.region %>
-  </p>
+  <td>
+    <%= Cartridge.regions[cartridge.region] %>
+  </td>
 
-  <p>
-    <strong>Game version:</strong>
+  <td>
     <%= cartridge.game_version %>
-  </p>
+  </td>
 
-</div>
+  <td>
+    <%= link_to "Edit", edit_admin_cartridge_path(cartridge) %>
+  </td>
+</tr>

@@ -1,7 +1,7 @@
-<div id="<%= dom_id game %>">
-  <p>
-    <strong>Title:</strong>
-    <%= game.title %>
-  </p>
-
-</div>
+<tr id="<%= dom_id game %>">
+  <td><%= game.id %></td>
+  <td><%= game.title %></td>
+  <td>
+    <%= link_to "Edit", edit_admin_game_path(game) %>
+  </td>
+</tr>

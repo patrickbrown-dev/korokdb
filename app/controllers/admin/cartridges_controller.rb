@@ -1,4 +1,4 @@
-class Admin::CartridgesController < ApplicationController
+class Admin::CartridgesController < Admin::ApplicationController
   before_action :set_cartridge, only: %i[show edit update destroy]
 
   def index

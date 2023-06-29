@@ -1,10 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @game %>
+<h1><%= @game.title %></h1>
+
+<table class="table" id="cartridges">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Game</th>
+      <th scope="col">Code</th>
+      <th scope="col">Build</th>
+      <th scope="col">Revision</th>
+      <th scope="col">Region</th>
+      <th scope="col">Game Version</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @game.cartridges.each do |cartridge| %>
+      <%= render cartridge %>
+    <% end %>
+  </tbody>
+</table>
 
 <div>
   <%= link_to "Edit this game", edit_admin_game_path(@game) %> |
   <%= link_to "Back to games", admin_games_path %>
-
-  <%= button_to "Destroy this game", admin_game_path(@game), method: :delete %>
 </div>
