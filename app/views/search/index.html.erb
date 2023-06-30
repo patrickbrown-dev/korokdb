@@ -1,0 +1,26 @@
+<div class="mt-3">
+  <p class="text-muted"><%= @search_results.count %> result(s) for "<%= @search %>"</p>
+</div>
+
+<% @search_results.each do |result| %>
+
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-1">
+      <img src="https://images.igdb.com/igdb/image/upload/t_cover_small/co4t6w.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-11">
+      <div class="card-body">
+        <h4 class="card-title"><%= result.game.title %></h4>
+        <p class="card-text">
+          <span class="badge text-bg-secondary">Code: <%= result.code %><%= result.build %></span>
+          <span class="badge text-bg-secondary">Revision: <%= result.revision %></span>
+          <span class="badge text-bg-secondary">Region: <%= Cartridge.regions[result.region] %></span>
+          <span class="badge text-bg-secondary">Game Version: <%= result.game_version %></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>

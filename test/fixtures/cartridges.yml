@@ -23,3 +23,11 @@ three:
   revision: "001"
   region: USA
   game_version: 1.0.4
+
+four:
+  game: three
+  code: A3SD
+  build: A
+  revision: "000"
+  region: JPN
+  game_version: 1.0.0
