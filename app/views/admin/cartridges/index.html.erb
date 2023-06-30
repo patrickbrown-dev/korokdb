@@ -2,7 +2,7 @@
 
 <h1>Cartridges</h1>
 
-<table class="table" id="cartridges">
+<table class="table table-hover" id="cartridges">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -17,7 +17,7 @@
   </thead>
   <tbody>
     <% @cartridges.each do |cartridge| %>
-      <%= render cartridge %>
+      <%= render cartridge, show_game: true %>
     <% end %>
   </tbody>
 </table>

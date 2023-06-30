@@ -2,11 +2,10 @@
 
 <h1><%= @game.title %></h1>
 
-<table class="table" id="cartridges">
+<table class="table table-hover" id="cartridges">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Game</th>
       <th scope="col">Code</th>
       <th scope="col">Build</th>
       <th scope="col">Revision</th>
@@ -17,7 +16,7 @@
   </thead>
   <tbody>
     <% @game.cartridges.each do |cartridge| %>
-      <%= render cartridge %>
+      <%= render cartridge, show_game: false %>
     <% end %>
   </tbody>
 </table>

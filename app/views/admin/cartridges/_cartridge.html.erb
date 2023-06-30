@@ -3,9 +3,11 @@
     <%= cartridge.id %>
   </td>
 
+  <% if show_game %>
   <td>
     <%= link_to cartridge.game.title, admin_game_path(cartridge.game) %>
   </td>
+  <% end %>
 
   <td>
     <%= cartridge.code %>
